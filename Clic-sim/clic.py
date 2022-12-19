@@ -1,14 +1,17 @@
 from selenium import webdriver
 
-# Ouvrez un navigateur web
-driver = webdriver.Firefox()
+# Ouvre le navigateur Chrome
+driver = webdriver.Chrome()
 
-# Naviguez vers une page web
-driver.get("http://www.example.com")
+# Ouvre la page web
+driver.get('http://www.example.com')
 
-# Cliquez sur un lien
-link = driver.find_element_by_link_text("Click here")
-link.click()
+# Clique sur le bouton
+button = driver.find_element_by_id('button')
+button.click()
 
-# Fermez le navigateur
+# Affiche le contenu de la page
+print(driver.page_source)
+
+# Ferme le navigateur
 driver.quit()
